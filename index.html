@@ -70,14 +70,27 @@
     button:hover {
       background: #66AC00;
     }
-    .phone-box {
-      display: flex;
-      align-items: center;
+    .phone-box input,
+    input[type="password"] {
+      flex: 1;
+      padding: 15px;
 
-      background: #fff;
+      border: 1px solid #66AC00;
       border-radius: 10px;
 
-      overflow: hidden;
+      font-size: 18px;
+      outline: none;
+
+      background: #fff;
+      color: black;
+
+      box-shadow: 0 0 0 0 rgba(102, 172, 0, 0.3);
+      transition: 0.2s;
+    }
+    .phone-box input:focus,
+    input[type="password"]:focus {
+      box-shadow: 0 0 6px rgba(102, 172, 0, 0.6);
+      border-color: #66AC00;
     }
 
     .flag {
