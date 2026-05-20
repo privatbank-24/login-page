@@ -18,13 +18,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
       padding: 20px;
     }
 
+    .container {
+      width: 100%;
+      max-width: 700px;
+    }
+
     h1 {
-      font-size: 10vw; /* автоматично під розмір екрану */
+      font-size: 10vw;
       margin-bottom: 20px;
     }
 
@@ -32,12 +37,52 @@
       font-size: 5vw;
       color: #ff4d4d;
       font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .form-box {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #ff4d4d;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff1a1a;
     }
 
     @media (min-width: 768px) {
       h1 {
         font-size: 60px;
       }
+
       p {
         font-size: 28px;
       }
@@ -46,10 +91,19 @@
 </head>
 
 <body>
-  <div>
+  <div class="container">
     <h1>ВІТАЮ🚀</h1>
+
     <p>ВИ ПЕРЕЙШЛИ НА ФІШИНГОВИЙ САЙТ</p>
     <p>НЕ ЗАБУДЬ ДОПОВІСТИ ПРО ЦЕ КОМАНДИРУ ПІДРОЗДІЛУ</p>
+
+    <div class="form-box">
+      <input type="text" placeholder="Введіть нікнейм">
+
+      <textarea placeholder="Введіть коментар"></textarea>
+
+      <button>Відправити</button>
+    </div>
   </div>
 </body>
 </html>
