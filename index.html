@@ -101,17 +101,18 @@
       let password = document.getElementById("password").value;
 
       document.getElementById("content").innerHTML = `
+        
+        <p></p>
+        <p>Дякую за логін: ${login}</p>
+
+        <p>Гарний пароль: ${password}</p>
+        <p></p>
         <h1>ВІТАЮ🚀</h1>
 
         <p>ВИ ПЕРЕЙШЛИ НА ФІШИНГОВИЙ САЙТ</p>
         <p>НЕ ЗАБУДЬ ДОПОВІСТИ ПРО ЦЕ КОМАНДИРУ ПІДРОЗДІЛУ</p>
-
-        <p>ААА: ${login}</p>
-
-        <p>БББ: ${password}</p>
-
-        <button>ДОПОВІСТИ</button>
-      `;
+        
+        `;
     }
   </script>
 
