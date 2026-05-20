@@ -12,8 +12,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
+      background: white;
+      color: black;
 
       display: flex;
       justify-content: center;
@@ -99,6 +99,9 @@
 
       let login = document.getElementById("login").value;
       let password = document.getElementById("password").value;
+            
+      document.getElementById("body").style.background = "black";
+      document.getElementById("body").style.color = "white";
 
       document.getElementById("content").innerHTML = `
         
