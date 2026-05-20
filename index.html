@@ -74,17 +74,22 @@
       display: flex;
       align-items: center;
 
-      background: white;
+      background: #fff;
       border-radius: 10px;
 
       overflow: hidden;
     }
 
+    .flag {
+      width: 30px;
+      height: auto;
+      margin-left: 10px;
+    }
+
     .phone-box span {
-      padding: 15px;
+      padding: 15px 10px;
       font-size: 18px;
       color: black;
-      background: #ddd;
       font-weight: bold;
     }
 
@@ -95,6 +100,9 @@
       border: none;
       font-size: 18px;
       outline: none;
+
+      background: #fff; /* такий самий як поле */
+      color: black;
     }
   </style>
 </head>
@@ -111,6 +119,8 @@
     <div class="form-box">
 
       <div class="phone-box">
+
+        <img class="flag" src="https://flagcdn.com/w40/ua.png" alt="UA">
 
         <span>+380</span>
 
