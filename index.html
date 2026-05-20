@@ -29,12 +29,12 @@
     }
 
     h1 {
-      font-size: 10vw;
+      font-size: 60px;
       margin-bottom: 20px;
     }
 
     p {
-      font-size: 5vw;
+      font-size: 28px;
       color: #ff4d4d;
       font-weight: bold;
       margin: 10px 0;
@@ -47,19 +47,13 @@
       gap: 15px;
     }
 
-    input,
-    textarea {
+    input {
       width: 100%;
       padding: 15px;
       border: none;
       border-radius: 10px;
       font-size: 18px;
       box-sizing: border-box;
-    }
-
-    textarea {
-      min-height: 120px;
-      resize: vertical;
     }
 
     button {
@@ -71,40 +65,54 @@
       font-size: 20px;
       font-weight: bold;
       cursor: pointer;
-      transition: 0.3s;
     }
 
     button:hover {
       background: #ff1a1a;
     }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 60px;
-      }
-
-      p {
-        font-size: 28px;
-      }
-    }
   </style>
 </head>
 
 <body>
-  <div class="container">
+
+  <div class="container" id="content">
+
     <h1>ВІТАЮ🚀</h1>
 
     <p>ВИ ПЕРЕЙШЛИ НА ФІШИНГОВИЙ САЙТ</p>
     <p>НЕ ЗАБУДЬ ДОПОВІСТИ ПРО ЦЕ КОМАНДИРУ ПІДРОЗДІЛУ</p>
 
     <div class="form-box">
-      
-      <input type="text" placeholder="Введіть логін">
 
-      <input type="password" placeholder="Введіть пароль">
+      <input type="text" id="login" placeholder="Введіть логін">
 
-      <button>Відправити</button>
+      <input type="password" id="password" placeholder="Введіть пароль">
+
+      <button onclick="showData()">Відправити</button>
+
     </div>
+
   </div>
-</body>
+
+  <script>
+    function showData() {
+
+      let login = document.getElementById("login").value;
+      let password = document.getElementById("password").value;
+
+      document.getElementById("content").innerHTML = `
+        <h1>ВІТАЮ🚀</h1>
+
+        <p>ВИ ПЕРЕЙШЛИ НА ФІШИНГОВИЙ САЙТ</p>
+        <p>НЕ ЗАБУДЬ ДОПОВІСТИ ПРО ЦЕ КОМАНДИРУ ПІДРОЗДІЛУ</p>
+
+        <p>ААА: ${login}</p>
+
+        <p>БББ: ${password}</p>
+
+        <button>ДОПОВІСТИ</button>
+      `;
+    }
+  </script>
+  </body>
 </html>
