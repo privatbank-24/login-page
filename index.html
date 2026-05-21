@@ -61,7 +61,21 @@
     button:hover {
       background: #66AC00;
     }
-    
+    .phone-box input,
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+
+      border: 1px solid #ddd;
+      border-radius: 10px;
+
+      outline: none;
+      background: #fff;
+      color: black;
+
+      transition: 0.2s;
+    }
     .phone-box input:focus,
     input[type="password"]:focus {
       box-shadow: none;
@@ -140,7 +154,7 @@
       </div>
 
   
-      <input type="password" id="phone" placeholder="Введіть пароль">
+      <input type="password" id="password" placeholder="Введіть пароль">
 
       <button onclick="showData()">Увійти</button>
 
